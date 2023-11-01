@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Genshin mushroom</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
+    <model-viewer src="mushroom2withgrass.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0" exposure="0.76">
+      <div class="progress-bar hide" slot="progress-bar">
+          <div class="update-bar"></div>
+      </div>
+      <button slot="ar-button" id="ar-button">
+          View in your space
+      </button>
+      <div id="ar-prompt">
+          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+      </div>
+  </model-viewer>
+  
+    <script src="script.js"></script>
+  </body>
+</html>
