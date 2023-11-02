@@ -198,6 +198,7 @@ model-viewer>#ar-prompt>img {
   width: 90vw;
   margin: 1rem;
   margin-inline: 5vw;
+  color: #000;
 }
 
 .backbutton:active {
