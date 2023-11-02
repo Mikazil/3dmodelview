@@ -1,25 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Genshin mushroom</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
 
-    <model-viewer src="mushroom2withgrass.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls poster="poster.webp" shadow-intensity="0" exposure="0.76">
+<head>
+  <meta charset="utf-8">
+  <title>Genshin mushroom</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 24
+    }
+  </style>
+</head>
+
+<body>
+  <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/3.3.0/model-viewer.min.js"></script>
+
+  <!-- Главное меню -->
+  <div class="menu" id="menu" style="display: flex;">
+    <h1>Genshin Impact New Character<br>Demo</h1>
+    <button class="startbutton" onclick="seedemo()">Start</button>
+    <button class="startbutton" onclick="instruction()">Instruction</button>
+    <button class="startbutton" onclick="about()">About Demo</button>
+  </div>
+
+  <!-- AR просмотр -->
+  <div class="container" style="display: none;" id="demowindow">
+    <model-viewer src="mushroom2withgrass.glb" ar ar-modes="webxr scene-viewer quick-look" camera-controls
+      poster="poster.webp" shadow-intensity="0" exposure="0.76">
       <div class="progress-bar hide" slot="progress-bar">
-          <div class="update-bar"></div>
+        <div class="update-bar"></div>
       </div>
       <button slot="ar-button" id="ar-button">
-          View in your space
+        View in your space
       </button>
       <div id="ar-prompt">
-          <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
+        <img src="https://modelviewer.dev/shared-assets/icons/hand.png">
       </div>
-  </model-viewer>
-  
-    <script src="script.js"></script>
-  </body>
+    </model-viewer>
+  </div>
+
+
+  <!-- Инструкция -->
+  <div class="instruction" id="instruction">
+    <h1>Instruction</h1>
+    <p>1. Для использования Genshin Impact New Character Demo нажмите на кнопку "Start".</p>
+    <p>2. Вы увидите 3D просмотр персонажа, чтобы перейти в режим AR, нажмите на кнопку "View in your space"</p>
+  </div>
+
+
+  <!-- About -->
+  <div class="about" id="about" style="display: none;">
+    <h1>About</h1>
+    <p>Данное демо было сделано за 4 дня и использует такие технологии, как AR и Веб разработка</p>
+  </div>
+
+  <!-- Кнопка назад -->
+  <button class="backbutton" id="back" style="position: absolute; bottom: 0; display: none;" onclick="backbutton()">
+    <span class="material-symbols-outlined">arrow_back</span>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
