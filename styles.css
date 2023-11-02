@@ -146,6 +146,7 @@ model-viewer>#ar-prompt>img {
   width: fit-content;
   padding-inline: 4rem;
   margin-block: 2rem;
+  color: #000;
 }
 
 .startbutton:active {
